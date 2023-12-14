@@ -1,0 +1,141 @@
+:root {
+	--clr-primary:  hsl(215, 99%, 66%);
+	--clr-secondary:  hsl(259, 99%, 65%);
+	--clr-neutral 100:  hsl(0, 0%, 100%);
+	--clr-neutral 900:  hsl(230, 32%, 15%);
+
+	--gradient: linear gradient(-255deg, var(--clr-primary),
+	  var(--clr-secondary));
+
+
+
+}
+
+body {
+	font-family: system-ui;
+	text-align: center;
+	color: var(--clr-neutral-900);
+	min-height: 100vh;
+	display: grid;
+	place-content: center;
+}
+
+.card {
+	display: grid;
+	grid-template-columns: 2rem 20rem 2rem;
+	grid-template-rows: repeat(3, auto);
+}
+
+.card-heading{
+	font-size: 1.25rem;
+	font-weight: 500;
+	color: black;
+}
+
+.hello{
+	font-size: 1.25rem;
+	font-weight: 400;
+}
+
+.welcome {
+	color: #050af7;
+	background: var(--gradient);
+	grid-column: 1 / -1 ;
+	grid-row: 1 / 3;
+	border-radius: 1rem;
+
+	display: grid;
+	grid-template-rows: subgrid;
+	grid-template-columns: subgrid;
+}
+
+.welcome div {
+	grid-column: 2 / 3;
+	padding-block: 1rem;
+}
+
+.start-chatting {
+	background: #71f4c2;	
+	padding: 2rem 4rem 4rem;
+	grid-column: 2 / 3;
+	grid-row: 2 / 4;
+	border-radius: .5rem;
+	box-shadow: 0 0 1rem black;
+
+
+	display: grid;
+	gap: 2rem;
+
+}
+
+
+
+.start-chatting > *{
+	margin: 0;
+}
+
+.start-chatting img{
+	max-width: 6rem;
+	border-radius: 50%;
+
+}
+
+.rep-info{
+	margin: 0;
+}
+
+.name{
+	font-size: 1.125rem;
+}
+
+.status{
+	font-size: 0.875rem;
+	gap: .5rem;
+	align-items: center;
+	display: flex;
+	border: 1px solid rgb(133, 133, 133);
+	border-radius: 100vw;
+	opecity: .7;
+	justify-self: center;
+	
+	margin-inline: auto;
+	padding: .o5em .75em;
+	margin: 2px;
+}
+
+.status::before{
+	content: '';
+	height: .6em;
+	width: 10px;
+	background: limegreen;
+	display: inline-block;
+	aspect-ratio: 1 / 1;
+}
+.status[data-status="active"]{
+	--status-color; limegreen;
+	
+}
+
+.rep-info > * {
+	margin: ;
+
+}
+
+.button{
+	margin: 0.4em;
+	padding: 0.5em;
+	background: #0af9ec;
+	color: #000;
+	border: 2;
+	border-radius: 2rem;
+	font-size: 1.05rem;
+	cursor: pointer;
+	background-size: 100%;
+	transition: background-size 200ms, scale:200ms ease-in-out;
+}
+
+.button:hover,
+.button:focus{
+	background-size: 200%;
+	scale: 1.05;
+}
